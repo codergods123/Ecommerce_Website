@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>TapTopUp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+<nav class="Navigation">
+    <a href="index.html"><img src="IMAGES/Logo.png" alt="Home Logo" class="logo"></a>
+
+    <ul class="Navbar">
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="Promo.html">Promos</a></li>       
+        <li><a href="Register.html">Log in</a></li>
+    </ul>
+   <ul class="Dropdown">
+    <li>
+      <a href="#">
+        More
+        <img src="https://img.icons8.com/ios-filled/16/ffffff/sort-down.png" alt="Sort down icon">
+      </a>
+      <ul class="Dropdown-content">
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Guide.html">Other</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+  <div class="ContactContainer">
+    <form class="ContactInformation">
+      <fieldset class="FieldContainer">
+        <legend>Contact</legend>
+      <label for="email">Email:</label>
+      <input type="email" id="email" list="emails"><br><br>
+      <datalist id="emails">
+        <option value="admin@gmail.com">
+        <option value="admin123@gmail.com">
+        <option value="admin12345@gmail.com">
+      </datalist>
+
+      <label for="subject">Contact Reasons:</label>
+      <select id="ctcreason" name="subject">
+        <optgroup label="Technical Issues">
+          <option value="bug">Report a Bug</option>
+          <option value="error">Website Error</option>
+          <option value="feature">Request a Feature</option>
+        </optgroup>
+        <optgroup label="General Concerns">
+          <option value="inquiry">Inquiry</option>
+          <option value="help">Need Help</option>
+          <option value="feedback">Send Feedback</option>
+        </optgroup>
+      </select>
+
+      <label for="message" id="ctcmessage">Message:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40"></textarea>
+
+      <label for="attachment">Attach a file:(Optional)</label>
+      <input type="file" id="attachment" name="attachment">
+
+      <input type="submit" id="ctcsubmit" value="Submit">
+    </form>
+    </fieldset>
+    <h1 id="faq">FAQ:</h1>
+    <img src="IMAGES\contactsupport.png" id="contactsupport">
+  </div>
+   
+  
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 TapTopUp. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="About.html">About</a></li>
+        <li><a href="Support.html">Support</a></li>
+        <li><a href="mailto:ryanpolmalabanan2@gmail.com">Email us!</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Promo.html">Promos</a></li>
+      </ul>
+
+      <div class="socials">
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Discord</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </footer>
+</body>
+
+</html>

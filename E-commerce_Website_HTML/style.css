@@ -1,0 +1,789 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+html, body{
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-image: url('IMAGES/backgroundimage.jpg');
+    background-repeat: no-repeat;            
+    background-size: cover;                 
+    background-position: center;            
+    height: 400px;                         
+    width: 100%;
+    min-width: 100vh;
+    background-attachment: fixed;
+}                        
+/*BUTTONS COLOR ETC*/
+.Navigation {
+  display: flex;              
+  align-items:center;       
+  justify-content: flex-start;
+  background-color: #222;
+  padding: 0px 0px;
+  position:flex;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+.GamesNav{
+  display: flex;              
+  align-items:center;       
+  justify-content: flex-start;
+  background-color: #222;
+  padding: 0px 0px;
+  position:flex;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+nav .logo {
+  height: 60px;   /* make logo bigger */
+  margin-right: 30px; /* add space before the menu */
+}
+nav a {
+  text-decoration: none;
+  color: rgb(134, 12, 12);
+  font-weight: bold;
+  font-size: 25px;
+}
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav li { position: relative; display: inline-block; }
+nav a { text-decoration: none; padding: 10px 15px; display: block; color: white; background-color: #222; }
+.Navigation :hover{
+ color: rgb(200, 8, 8);
+}
+.Dropdown {
+  list-style: none;
+  background-color: #222;
+  padding: 10px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+.Dropdown > li {
+  position: relative;
+}
+.Dropdown a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  border-radius: 5px;
+  z-index: 9999;
+}
+.Dropdown-content li a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+.Dropdown li:hover .Dropdown-content {
+  display: inline-block;
+}
+/*FOR HEADLINE*/
+.row{
+    align-items: left;
+    margin-left: 50px;
+    margin-top: 5%;
+    color: rgb(255, 255, 255);
+    width: 600px;
+}
+h1 {
+  font-size:100px;
+  margin-left: 40px;
+}
+h2 {
+  margin-top: 10px;
+  margin-left: 60px;
+}
+.h3{
+  margin-left:4.5%;
+}
+/*-----------------------------------*/
+.btnmain{
+  margin-top: 25px;
+}
+.btn{
+    font-size: 61px;
+    font-style: normal;
+    color: black;
+    background-color: rgb(243, 2, 2);
+    border-radius: 15%;
+    border: black;
+    border-style: solid;
+    border-width: 7px;
+    width: 420px;
+    height: 80px;
+    margin-left: 120px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn:hover{
+    background: rgb(133, 33, 33);
+}
+h3 {
+  text-align: left;
+  color: white;
+  margin-top: 20px;
+}
+/*BIG LOGO MODIFICATION*/
+.BigLogo img {             /* adjust to your size */
+  border-radius: 20%;
+  border: 3px solid #000000;
+  margin-left: 47%;
+  margin-top: -28%;
+  opacity: 80%;
+}
+.search-Bar {
+    display: flex;              /* Align input and button in a row */
+    justify-content: center;    /* Center horizontally */
+    margin-top: -70px;
+    margin-left: 60%;
+    width: 25%;
+    height: 45px;
+}
+
+.search-input {
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Rounded corners on left */
+    outline: none;
+}
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-left: none;          /* Remove double border between input & button */
+    border-radius: 5px 5px 5px 0; /* Rounded corners on right */
+    background-color: #c13131;  /* Green button */
+    color: white;
+    cursor: pointer;
+    height: 45px;
+    margin-left: -2px;
+}
+.search-button:hover {
+    background-color: #c64841;  /* Darker green on hover */
+}
+/*----------------footer---------------------*/
+footer {
+  background-color: #222;
+  color: #f1f1f1;
+  text-align: center;
+  padding: 30px 0;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* Footer Text */
+footer p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+/* Footer Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.footer-links li {
+  display: inline;
+  margin: 0 10px;
+}
+.footer-links a {
+  color: #00bfff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px #00bfff;
+}
+/* Social Links */
+.socials a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+.socials a:hover {
+  color: #00bfff;
+}
+/*----------------------GAMES------------------------------------------------------------------------------------------------------*/
+.p{
+  font-style: italic;
+  color: white;
+  font-size: 30px;
+}
+.New h1{
+  font-size: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  color:white;
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+.Popular h2{
+  font-size: 70px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:white;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 3%;
+  margin-top: 3%;
+  margin-bottom: 0%;
+}
+/*-------------------------LOGOS-------------------------------*/
+.Topupsection img:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.RobloxLogo{
+  margin-left: 3%;
+  margin-top: 2%;
+   border-style: solid;
+  color: silver;
+  border-width: 5px;
+  width: 250px;
+  height: 250px;
+}
+.RobloxLogo:hover{
+  color: red;
+}
+.ZzzLogo{
+   margin-left: 3%;
+  margin-top: 2%;
+   border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+}
+.ZzzLogo:hover{
+  color: red;
+}
+.HokLogo{
+   margin-left: 3%;
+  margin-top: 2%;
+   border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+}
+.HokLogo:hover{
+  color: red;
+}
+/*----------------------------------*/
+.MlLogo{
+  margin-left: 3%;
+  margin-top: -2%;
+   border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+    height: 250px;
+}
+.MlLogo:hover{
+  color: red;
+}
+.ValorantLogo{
+  margin-left: 3%;
+  margin-top: 2%;
+  border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+    height: 250px;
+}
+.ValorantLogo:hover{
+  color: red;
+}
+.CodmLogo{
+    margin-left: 3%;
+  margin-top: 0%;
+  border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+    height: 250px;
+}
+.CodmLogo:hover{
+  color: red;
+}
+.LolLogo{
+  margin-left: 3%;
+  margin-top: 0%;
+  border-style: solid;
+  color: silver;
+  border-width: 5px;
+   width: 250px;
+    height: 250px;
+}
+.LolLogo:hover{
+  color: red;
+}
+.WrLogo{
+  margin-left: 3%;
+  margin-top: 2%;
+  border-style: solid;
+  color: silver;
+  border-width: 5px;
+  width: 250px;
+  height: 250px;
+}
+.WrLogo:hover{
+  color: red;
+}
+/*-----------------------------Iframe-----------------------------------*/
+iframe {
+  position: relative; 
+  top: -70px;          
+  left: 250px;        
+  width: 70%;      
+  height: 600px;      
+  margin-bottom: 50px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 5px;
+  padding:0%
+  ;
+}
+/*--------------------Slideshows-------------------------*/
+.fade-slideshow {
+  width: 600px;
+  height: 300px;
+  margin: 40px auto;
+  border-radius: 20px;
+  border: 5px solid white;
+  overflow: hidden;
+  position: relative;
+}
+/* all slides stack on top of each other */
+.fade-slideshow figure {
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  animation: fadeCycle 15s infinite;
+}
+.fade-slideshow figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+/* Keyframes for fade effect */
+@keyframes fadeCycle {
+  0% { opacity: 0.5; }
+  10% { opacity: 1; }
+  30% { opacity: 1; }
+  40% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/* Delay each image so they appear one after another */
+.fade-slideshow figure:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.fade-slideshow figure:nth-child(2) {
+  animation-delay: 3s;
+}
+.fade-slideshow figure:nth-child(3) {
+  animation-delay: 6s;
+}
+.fade-slideshow figure:nth-child(4) { animation-delay: 9s; }
+/*-------------Verticalads------------------*/
+.Verticalads{
+  height: 300px;
+  position: relative;
+}
+.Verticalads img{
+ width: 20%;
+ height: 880px;
+ position:absolute;
+ left: 80%;
+ top: -397%;
+ background-color:#000000
+}
+.Verticalads:hover{
+  color: red;
+  filter: brightness(80%);
+}
+/*------------------------------TOP UP-----------------------------------*/
+.First {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center;
+  text-align: center;    
+  font-size: 20px;
+  color: white;
+  font-style: italic;
+}
+.First img{
+  margin-top: 5px;
+  width: 90%;
+}
+.robloxcenter{
+  font-size: 35px;
+  color: black;
+}
+.topup-container {
+  background: white;
+  padding: 30px;  
+  border-radius: 20px;
+  width: 800px;
+  height: 700px;
+  margin: 40px auto;
+  border-style: solid;
+  border-color: maroon;
+  border-width: 10px;
+}
+/*------------------------payment---------------------*/
+#gameID-label{
+  background-color: #ffffff;
+  border: solid black
+  ;
+}
+.input-box {
+  margin-bottom: 20px;
+  margin-top: 20px; 
+}
+input[type="text"] {
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  border-style: solid;
+  border-color: #000000;
+}
+.amount-section h3, .method-section h3, .ValoDiscount h3{
+  margin: 20px 0;
+  color: #000000;
+}
+#amount50-label{
+  border-style: solid;
+  border-color: #000000;
+}
+#amount100-label{
+  border-style: solid;
+  border-color: #000000;
+}
+#amount200-label{
+  border-style: solid;
+  border-color: #000000;
+}
+#amountdiscount-label{
+  border-style: solid;
+  border-color: #000000;
+}
+#gcash-label{
+  border-style: solid;
+  border-color: #000000;
+}
+#paymaya-label{
+    border-style: solid;
+  border-color: #000000;
+}
+.submit-btn{
+    position: relative;
+    top: 60px;
+    left: -225px;
+}
+input[type="radio"] {
+  display: none;
+}
+/* Make labels look like buttons */
+label {
+  display: inline-block;
+  background: #ffffff;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+/* When selected */
+input[type="radio"]:checked + label {
+  background: #4a7ef0;
+  color: #fff;
+  box-shadow: 0 0 10px #4a7ef0;
+}
+/* Submit Button */
+.submit-btn {
+  background: #00c853;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.submit-btn:hover {
+  background: #00e676;
+}
+/*--------------------------About---------------------------------------*/
+.AboutTTU h1{
+  font-size: 80px;
+  color: white;
+}
+.About-P{
+  font-size: 22px;
+  margin-top: 30px;
+  color: white;
+  margin-bottom: 250px;
+}
+/*----------------Promos--------------------------------*/
+.Promostoday h1{
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  font-family: Verdana;
+}
+#PromoVerticalads{
+  width: 400px;
+  height: 700px;
+}
+.PromoAvailable, 
+.PromoAvailable th, 
+.PromoAvailable td {
+  border: 5px solid rgb(64, 2, 2);
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 30px;
+  margin: 20px auto;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.PromoAvailable th{
+  color: rgb(255, 255, 255);
+  background-color: maroon;
+}
+.PromoAvailable td{
+  background-color: rgba(175, 37, 37, 0.65);
+}
+.PromoAvailable th, .PromoAvailable td {
+  width: 50%;
+}
+.RickRoll{
+  position: relative;
+  align-items: center;
+}
+.Email{
+  margin-left: 15px;
+}
+#Valopromo{
+  color: white;
+  text-decoration: none;
+}
+#Valopromo:hover{
+  color: black;
+}
+/*---------------------------------Support deatails-----------------------------*/
+.SupportDetails {
+  font-size: 40px;
+  font-family: Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+#PDFIFRAME {
+  width: 70%;
+  height: 800px;
+  border: none;
+  padding: 0,0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+/*---------------------------------------------------LOG IN-------------------------------------------------------*/
+.LogInContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.LoginBackground{
+  background-color: rgb(249, 249, 249);
+  width: 550px;
+  height: 600px;
+  position: relative;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 60px;
+}
+.LoginBackground label{
+  border-style: solid;
+  border-color: #000000;
+}
+#username{
+  margin-top: 30px;
+  width: 300px;
+  height: 30px;
+}
+#email{
+  width: 325px;
+  height: 30px;
+  margin-top: 30px;
+  border: solid 2px black
+}
+#password{
+  width: 300px;
+  height: 30px;
+  margin-top: 30px;
+   border: solid 2px black
+}
+#birth{
+    width: 100px;
+  height: 30px;
+  margin-top: 30px;
+   border: solid 2px black
+}
+.signuptext{
+  font-size: 35px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#Signupbutton{
+  font-size: 20px;
+  background-color: blue;
+  border-radius: 10%;
+  padding: 2px;
+  color: white;
+}
+#Signupbutton:hover{
+  background-color: darkblue;
+}
+/*-----------------------------------CONTACTS-----------------------------------------------*/
+.ContactInformation{
+  background-color: rgb(255, 255, 255);
+  width: 550px;
+  height: 600px;
+  position: relative;
+  left: 300px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  margin-top: 20px;
+  border-style: solid;
+  border-color: #000000;
+  top: 80px;
+}
+
+.ContactContainer{
+display: flex;
+flex-direction: row;
+gap: 3.2%;
+border-style: solid;
+background-color: #f1f1f1;
+height: 200%;
+}
+
+legend{
+  padding: 0 1.5rem;
+}
+
+.FieldContainer{
+  border: 1px solid black;
+  border-radius: 1.5rem;
+  /* padding: 1rem; */
+}
+#ctcemail{
+  position: relative;
+  top: 25px;
+  width:40px
+
+}
+#ctcreason{
+  margin-top: 30px;
+  width: 300px;
+  height: 30px;
+}
+#message{
+  margin-top: 30px;
+  width: 510px;
+  height: 150px;
+
+}
+#ctcmessage{
+  font-size: 20px;
+  margin-top: 30px;
+  position: relative;
+  left: 180px;
+
+}
+#ctcsubmit{
+  position: relative;
+   font-size: 20px;
+  background-color: blue;
+  border-radius: 10%;
+  padding: 2px;
+  left: 430px;
+  top: -40px;
+  color: white;
+}
+
+#ctcsubmit:hover{
+  background-color: darkblue;
+}
+
+#contactsupport{
+  width: 300px;
+  height: 600px;
+  position: relative;
+  top: 100px;
+  border-style: solid;
+  border-color:black;
+  left: 40px;
+}
+
+#faq{
+  font-size: 80px;
+  color: royalblue;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+  
+}
+
+#registertext{
+  color: royalblue;
+}
+/*------------------------------------------pagesbackground------------------------------*/
+.IndexBackground{
+  height: 180%;
+}
+
+.promobackground{
+  height: 160%;
+}
+
+.registerbackground{
+  height: 200%;
+  background-color: #f1f1f1;
+}
+#range {
+
+  font-size: 16px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s ease;
+}
