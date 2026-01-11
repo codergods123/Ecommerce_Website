@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TapTopUp</title>
+
+  <!-- Fonts FIRST -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+ <!-- Then CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+
+<body>
+  <header>
+<nav class="Navigation">
+    <a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='images/Home_Logo.png')}}" alt="Home Logo" class="logo"></a>
+
+    <ul class="Navbar">
+        <li><a href="{{ url_for('games')}}">Games</a></li>
+        <li><a href="{{ url_for('promos')}}">Promos</a></li>       
+        <li><a href="{{ url_for('register')}}">Log in</a></li>
+    </ul>
+   <ul class="Dropdown">
+    <li>
+      <a href="#">
+        More
+        <img src="https://img.icons8.com/ios-filled/16/ffffff/sort-down.png" alt="Sort down icon">
+      </a>
+      <ul class="Dropdown-content">
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="{{ url_for('guide')}}">Other</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+ <form class="ContactContainer">
+  <div class="ContactInformation">
+    <h1 id="faq">FAQ:</h1>
+      <fieldset class="FieldContainer">
+        <legend>Contact</legend>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" list="emails"><br><br>
+
+        <datalist id="emails">
+          <option value="admin@gmail.com">
+          <option value="admin123@gmail.com">
+          <option value="admin12345@gmail.com">
+        </datalist>
+        
+        <label for="subject">Contact Reasons:</label>
+        <select id="ctcreason" name="subject">
+          <optgroup label="Technical Issues"> <option value="bug">Report a Bug</option>
+            <option value="error">Website Error</option> <option value="feature">Request a Feature</option> 
+            <optgroup label="General Concerns"> <option value="inquiry">Inquiry</option> 
+            <option value="help">Need Help</option> <option value="feedback">Send Feedback</option> 
+        </select>
+        
+
+        <label for="message" id="ctcmessage">Message:</label><br>
+        <textarea id="message"></textarea>
+
+        <label for="attachment">Attach a file:</label>
+        <input type="file" id="attachment">
+
+        <input type="submit" id="ctcsubmit" value="Submit">
+      </fieldset>
+  </div>
+  <img src="{{ url_for('static', filename='images/contactsupport.png')}}" id="contactsupport">
+</form>
+   
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 TapTopUp. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="{{ url_for('about')}}">About</a></li>
+      <li><a href="{{ url_for('guide')}}">Support</a></li>
+      <li><a href="mailto:ryanpolmalabanan2@gmail.com">Email us!</a></li>
+      <li><a href="{{ url_for('contact')}}">Contact</a></li>
+      <li><a href="{{ url_for('promos')}}">Promos</a></li>
+    </ul>
+
+    <div class="socials">
+      <a href="#" id="facebook-icon"><img src="{{ url_for('static', filename='images/facebook-icon.png')}}" alt="Facebook"></a> 
+      <a href="#"id="instagram-icon"><img src="{{ url_for('static', filename='images/instagram-icon.png')}}" alt="Instagram"></a> 
+      <a href="#" id="discord-icon"><img src="{{ url_for('static', filename='images/discord-icon.png')}}" alt="Discord"></a> 
+    </div>
+  </div>
+</footer>
+
+
+  <script src="{{ url_for('static', filename='js/Script.js')}}"></script>
+</body>
+
+</html>

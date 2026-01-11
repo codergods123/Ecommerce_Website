@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TapTopUp</title>
+   <!-- Then CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+
+<body>
+  <div class="registerbackground">
+  <header>
+<nav class="Navigation">
+    <a href="{{ url_for('index')}}"><img src="{{ url_for('static', filename='images/Home_Logo.png')}}" alt="Home Logo" class="logo"></a>
+
+    <ul class="Navbar">
+        <li><a href="{{ url_for('games')}}">Games</a></li>
+        <li><a href="{{ url_for('promos')}}">Promos</a></li>       
+        <li><a href="#">Log in</a></li>
+    </ul>
+   <ul class="Dropdown">
+    <li>
+      <a href="#">
+        More
+        <img src="https://img.icons8.com/ios-filled/16/ffffff/sort-down.png" alt="Sort down icon">
+      </a>
+      <ul class="Dropdown-content">
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="{{ url_for('contact')}}">Contact</a></li>
+        <li><a href="{{ url_for('guide')}}">Other</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</header>
+
+  <div class="LogInContainer">
+ <form class="LoginBackground">
+  <div class="signuptext">  
+  <p id="registertext">SIGN UP TODAY TO BECOME A MEMBER!</p>
+  <h6>get instant updates on new features and announcements.</h6></div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" list="usernames"><br><br>
+  <datalist id="usernames">
+    <option value="Admin">
+    <option value="Admin123">
+    <option value="Admin12345">
+ </datalist>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" list="emails"><br><br>
+  <datalist id="emails"> 
+    <option value="admin@gmail.com">
+    <option value="admin123@gmail.com">
+    <option value="admin12345@gmail.com">
+  </datalist>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password"><br><br>
+
+  <label for="birth">Birthdate:</label>
+  <input type="date" id="birth"><br><br>
+
+  <label><input type="checkbox"> I agree to the Terms</label><br><br>
+
+  <input type="submit" id="Signupbutton" value="Sign Up">
+</form></div></div>
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 TapTopUp. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="{{ url_for('about')}}">About</a></li>
+      <li><a href="{{ url_for('guide')}}">Support</a></li>
+      <li><a href="mailto:ryanpolmalabanan2@gmail.com">Email us!</a></li>
+      <li><a href="{{ url_for('contact')}}">Contact</a></li>
+      <li><a href="{{ url_for('promos')}}">Promos</a></li>
+    </ul>
+
+    <div class="socials">
+      <a href="#" id="facebook-icon"><img src="{{ url_for('static', filename='images/facebook-icon.png')}}" alt="Facebook"></a> 
+      <a href="#"id="instagram-icon"><img src="{{ url_for('static', filename='images/instagram-icon.png')}}" alt="Instagram"></a> 
+      <a href="#" id="discord-icon"><img src="{{ url_for('static', filename='images/discord-icon.png')}}" alt="Discord"></a> 
+    </div>
+  </div>
+</footer>
+
+ </body>

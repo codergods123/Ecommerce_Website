@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TapTopUp</title>
+
+  <!-- Fonts FIRST -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Then CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+
+  <header>
+    <nav class="GamesNav">
+      <a href="{{ url_for('index')}}">
+        <img src="{{ url_for('static', filename='images/Home_Logo.png')}}" alt="Home Logo" class="logo">
+      </a>
+       <ul class="Navbar">
+        <li><a href="{{ url_for('games')}}">Games</a></li>
+        <li><a href="{{ url_for('promos')}}">Promos</a></li>       
+        <li><a href="{{ url_for('register')}}">Log in</a></li>
+    </ul>
+   <ul class="Dropdown">
+    <li>
+      <a href="#">
+        More
+        <img src="https://img.icons8.com/ios-filled/16/ffffff/sort-down.png" alt="Sort down icon">
+      </a>
+      <ul class="Dropdown-content">
+        <li><a href="{{ url_for('about')}}">About</a></li>
+        <li><a href="{{ url_for('contact')}}">Contact</a></li>
+        <li><a href="{{ url_for('guide')}}">Other</a></li>
+      </ul>
+    </li>
+  </ul>
+      
+      <!-- Search -->
+  <div class="search-Bar">
+    <input type="text" placeholder="Search..." class="search-input">
+    <button class="search-button">Search</button>
+  </div>
+    </nav>
+    </header>
+
+ <!---->
+       <div class="BigLogo">
+    <img src="{{ url_for('static', filename='images/FRONT_LOGO.png')}}" alt="GameCurrencyLogo" usemap="#bigLogoMap"></div>
+    <map name="bigLogoMap">
+  <area shape="rect" coords="30, 60, 270, 200" href="{{ url_for('codm')}}" alt="codm">
+  <area shape="rect" coords="430, 60, 670, 200" href="{{ url_for('valorant')}}" alt="valo">
+  <area shape="rect" coords="30, 270, 270, 420" href="{{ url_for('lol')}}" alt="lol">
+  <area shape="rect" coords="430, 270, 670, 420" href="{{ url_for('ml')}}" alt="ml">
+</map>
+</div>
+
+   <section class="Games-section">
+        <h1 id="New">NEW</h1>
+        <div class="popular-grid"> 
+        <a href="{{ url_for('bs')}}"><img src="{{ url_for('static', filename='images/BS.jpg')}}" id="bs" alt="BS-LOGO"></a>
+         <a href="{{ url_for('genshin')}}"><img src="{{ url_for('static', filename='images/Genshin_Impact.png')}}" id="genshin" alt="genshin-LOGO"></a></div>
+    
+        <h1 id="Popular">POPULAR</h1>
+        <div class="popular-grid"> 
+        <a href="{{ url_for('ml') }}"><img src="{{ url_for('static', filename='images/ML.png')}}" id="ml" alt="ML-LOGO"></a>
+        <a href="{{ url_for('codm') }}"><img src="{{ url_for('static', filename='images/CODM.jpg')}}" id="codm"alt="CODM-LOGO"></a>
+        <a href="{{ url_for('valorant') }}"><img src="{{ url_for('static', filename='images/VALO.png')}}" id="valo"alt="Valo-logo"></a>
+        <a href="{{ url_for('lol') }}"><img src="{{ url_for('static', filename='images/LOL.jpg')}}" id="lol"alt="LOL-logo"></a>
+      </div>
+    </section>
+
+<iframe class="valo-vid"
+  src="https://www.youtube.com/embed/IhhjcB2ZjIM" 
+  title="YouTube video | Valorant Trailer" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  allowfullscreen>
+</iframe> </main>
+
+<section class="whytaptopup">
+  <h1>TapTopUP Philippines</h1>
+  <h4>Why top up games on TapTopUp?</h4>
+  <p>
+    Millions of gamers count on TapTopUp every month for a seamless purchase experience when buying game credits or vouchers - No registration or log-in is required, and purchases are added to your game account instantly. Top-up PUBG Mobile, Mobile Legends, and more now!
+  </p>
+
+  <div class="features">
+    <figure>
+      <img src="{{ url_for('static', filename='images/wall-clock.png')}}" alt="Fast Purchase">
+      <figcaption>Only takes a few seconds to complete a purchase</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ url_for('static', filename='images/confetti.png')}}" alt="Celebration">
+      <figcaption>Exciting rewards and bonuses on every top-up</figcaption>
+    </figure>
+
+    <figure>
+      <a href="{{ url_for('contact') }}"><img src="{{ url_for('static', filename='images/customer service.png')}}" alt="Support"></a>
+      <figcaption>24/7 customer service ready to help</figcaption>
+    </figure>
+
+    <figure>
+      <img src="{{ url_for('static', filename='images/gem.png')}}" alt="Safe Payments">
+      <figcaption>Safe and secure payments guaranteed</figcaption>
+    </figure>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="footer-content">
+    <p>&copy; 2025 TapTopUp. All rights reserved.</p>
+    <ul class="footer-links">
+      <li><a href="{{ url_for('about') }}">About</a></li>
+      <li><a href="{{ url_for('guide') }}">Support</a></li>
+      <li><a href="mailto:ryanpolmalabanan2@gmail.com">Email us!</a></li>
+      <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      <li><a href="{{ url_for('promos') }}">Promos</a></li>
+    </ul>
+
+<div class="socials">
+      <a href="#" id="facebook-icon"><img src="{{ url_for('static', filename='images/facebook-icon.png')}}" alt="Facebook"></a> 
+      <a href="#"id="instagram-icon"><img src="{{ url_for('static', filename='images/instagram-icon.png')}}" alt="Instagram"></a> 
+      <a href="#" id="discord-icon"><img src="{{ url_for('static', filename='images/discord-icon.png')}}" alt="Discord"></a> 
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
